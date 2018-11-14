@@ -7,19 +7,24 @@ public class FirstTask {
         Scanner scanner = new Scanner(System.in);
         String[] strArr = scanner.nextLine().split(" ");
         int[] arr = new int[strArr.length];
-        int i = 0;
-        int k = 0;
-        while(i<= arr.length){
-            do{
-                k++;
-            }while(arr[i]>arr[i+k]);
-           if(arr[i]< arr[i+k]){
-               i = i+k;
-               k=0;
-           }
-        } System.out.println(arr[i]);
+        for(int i = 0; i < arr.length; i++){
+            String str = strArr[i];
+            int val = Integer.parseInt(str);
+            arr[i] = val;
+        }
+        int max = 0;
+        int min = 0;
+        for( int i = 0; i < arr.length; i++){
+            if(arr[i] > arr[max]){
+                max = i;
+            }
+            if(arr[i] < arr[min]){
+                min = i;
+            }
 
-
+        }
+        System.out.println("max =" + arr[max]);
+        System.out.println("min =" + arr[min]);
     }
 
 }
