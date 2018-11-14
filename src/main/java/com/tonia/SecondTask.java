@@ -6,23 +6,17 @@ public class SecondTask {
         Scanner scanner = new Scanner(System.in);
         String[] strArr = scanner.nextLine().split(" ");
         int[] arr = new int[strArr.length];
-        int first = 1;
-        int last = arr.length-1;
-        int mid =arr[(first + last)/2];
+        for(int i = 0; i < arr.length; i++){
+            String str = strArr[i];
+            int val = Integer.parseInt(str);
+            arr[i] = val;
+        }
+        int i = 0;
+        int buff;
+        char = 0;
 
-        while(first <= last){
-            while(arr[first]<= mid){
-                first++;
-            }
-            while(arr[last]>mid){
-                last--;
-            }
-            if(first<=last){
-                int buffer = arr[first];
-                arr[first]=arr[last];
-                System.out.println(arr[first]);
-                break;
-            }
+
+
 
         }
 
